@@ -3,31 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>taoyuan popu;ation table</title>
+  <title>桃園市人口統計圖表</title>
   <style>
     body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #f9f9f9;
       margin: 0;
       padding: 0;
+      line-height: 1.6;
     }
     header {
-      background-color: #4CAF50;
+      background-color: #3CB371;
       color: white;
-      padding: 20px 0;
+      padding: 24px 0;
       text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     main {
       max-width: 960px;
       margin: 40px auto;
-      padding: 0 20px;
+      padding: 0 24px;
       background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     }
-    h1 {
+    h1, h2 {
       margin-top: 0;
+    }
+    p {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 20px;
     }
     .chart-container {
       margin: 40px 0;
@@ -36,7 +42,11 @@
       text-align: center;
       padding: 20px;
       font-size: 14px;
-      color: #777;
+      color: #999;
+      border-top: 1px solid #ddd;
+    }
+    footer:hover {
+      color: #666;
     }
   </style>
 </head>
@@ -44,10 +54,17 @@
   <header>
     <h1>互動統計圖表展示</h1>
   </header>
+
   <main>
     <section>
       <h2>關於本圖表</h2>
-      <p>桃園市村里級熱圖，遠過點擊縣市中的鄉再顧示村里細節，資料以村里為主•</p>
+      <p>
+        本圖表呈現桃園市村里級的人口分布狀況，根據統計數據顯示，人口分布相當不均。<br>
+        以四分位數觀察，Q1 為 2920.25、Q2（中位數）為 4339.25、Q3 為 5842.5，平均數則為 4532.264，<br>
+        顯示出整體村里人口集中在約 3000 至 6000 人之間。<br>
+        然而最大值高達 18915，最小值僅為 668，這表示部分村里人口非常集中，也有一些明顯偏低，可能與區域發展、都市化程度有關。<br>
+        建議可從空間規劃與資源配置角度深入探討，針對高密度與低密度地區提供不同政策方向。
+      </p>
     </section>
 
     <section class="chart-container">
@@ -56,7 +73,7 @@
   </main>
 
   <footer>
-    &copy; 2025 資料視覺化網站｜由 ChatGPT 協助製作
+    &copy; 2025 資料視覺化網站
   </footer>
 </body>
 </html>
