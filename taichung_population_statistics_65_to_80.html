@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>人口統計圖表展示</title>
+  <title>台中市人口統計圖表展示65-80歲</title>
   <style>
     body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -43,6 +43,9 @@
       border-radius: 8px;
       overflow: hidden;
       transition: transform 0.3s ease;
+      width: 100%;
+      height: 600px;
+      border: none;
     }
     iframe:hover {
       transform: scale(1.02);
@@ -66,19 +69,22 @@
 
 <body>
   <header>
-    <h1>互動統計圖表展示</h1>
+    <h1>臺中市 65-80 歲人口統計圖表</h1>
   </header>
 
   <main>
     <section>
-      <h2>臺中市 65-80 歲人口分佈</h2>
+      <h2>統計分析摘要</h2>
       <p>
-        本圖表展示臺中市 65 至 80 歲人口的分布情形，可作為了解區域高齡人口密度及規劃長照政策的重要依據。
+        本圖表展示臺中市 65 至 79 歲人口分布情形，總人口數達 386,052 人。<br>
+        各年齡層分布如下：65–69 歲占 45.55%、70–74 歲占 35.82%、75–79 歲占 18.64%。<br>
+        其中高齡人口最多集中在 <strong>北屯區</strong>（38,950 人），而高齡人口最少的地區為 <strong>和平區</strong>（1,866 人）。<br>
+        此資料可作為未來高齡化社會資源配置與政策規劃的重要依據。
       </p>
     </section>
 
     <section class="chart-container">
-      <iframe src="https://plotdb.io/v/chart/37295" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
+      <iframe src="https://plotdb.io/v/chart/37295" allowfullscreen="true"></iframe>
     </section>
   </main>
 
