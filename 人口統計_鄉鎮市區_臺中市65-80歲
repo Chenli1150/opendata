@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>桃園市人口統計圖表</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #3CB371;
+      color: white;
+      padding: 24px 0;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    main {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 24px 40px 24px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      animation: fadeIn 1s ease-in;
+    }
+    h1, h2 {
+      margin-top: 0;
+    }
+    p {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .chart-container {
+      margin: 40px 0;
+    }
+    iframe {
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    iframe:hover {
+      transform: scale(1.02);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #999;
+      border-top: 1px solid #ddd;
+    }
+    footer:hover {
+      color: #666;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>互動統計圖表展示</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>關於本圖表</h2>
+      <p>
+        本圖表呈現桃園市村里級的人口分布狀況。根據統計數據，人口分布集中於 3000 至 6000 人間，
+        但最大值達 18915，最小值僅 668，顯示區域發展不均。未來可針對高密度與低密度地區提供不同政策與資源配置策略。
+      </p>
+    </section>
+
+    <section class="chart-container">
+      <h2>第一個圖表：桃園市村里人口熱點</h2>
+      <iframe src="https://plotdb.io/v/chart/37199" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
+    </section>
+
+    <section class="chart-container">
+      <h2>第二個圖表：各區人口分佈比較</h2>
+      <iframe src="https://plotdb.io/v/chart/37295" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 資料視覺化網站｜由 ChatGPT 協助製作
+  </footer>
+</body>
+</html>
