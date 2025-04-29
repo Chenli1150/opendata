@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>人口統計圖表展示</title>
+  <title>臺中市80-100歲人口統計圖表</title>
   <style>
     body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -28,8 +28,13 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.08);
       animation: fadeIn 1s ease-in;
     }
-    h1 {
+    h1, h2 {
       margin-top: 0;
+    }
+    p {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 20px;
     }
     .chart-container {
       margin: 40px 0;
@@ -64,10 +69,28 @@
 
 <body>
   <header>
-    <h1>人口統計圖表展示</h1>
+    <h1>臺中市80-100歲人口統計圖表</h1>
   </header>
 
   <main>
+    <section>
+      <h2>統計分析摘要</h2>
+      <p>
+        本圖表展示的是<strong>臺中市80至100歲人口</strong>的分布情形，總人口數為<strong>88,196人</strong>。<br><br>
+
+        🔹 年齡層分布方面：<br>
+        - 80–84歲人口占比最高，達<strong>53.45%</strong>。<br>
+        - 85–89歲占<strong>30.41%</strong>，90–94歲占<strong>12.29%</strong>，95–99歲占<strong>3.36%</strong>，<br>
+        - 100歲以上則約占<strong>0.50%</strong>，展現出人口隨年齡增長逐漸遞減的趨勢。<br><br>
+
+        🔹 地區分布方面：<br>
+        - 高齡人口最集中的區域為<strong>北屯區</strong>，共有<strong>8,028人</strong>，<br>
+        - 最少人口的地區為<strong>和平區</strong>，僅<strong>505人</strong>。<br><br>
+
+        整體來看，80歲以上長者主要集中在市區地帶，偏遠地區則相對稀少。這些資訊對於未來長照資源、醫療設施布局等規劃具有重要參考價值。
+      </p>
+    </section>
+
     <section class="chart-container">
       <iframe src="https://plotdb.io/v/chart/37295" allowfullscreen="true"></iframe>
     </section>
