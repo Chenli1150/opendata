@@ -11,41 +11,78 @@
       margin: 0;
       padding: 0;
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
     header {
-      background-color: #3CB371;
+      background-color: #2C7A7B;
       color: white;
       padding: 24px 0;
       text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    nav {
+      background-color: #ffffff;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      text-decoration: none;
+      color: #2C7A7B;
+      font-weight: bold;
+      padding: 8px 16px;
+      border: 2px solid #2C7A7B;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #2C7A7B;
+      color: white;
     }
     main {
       max-width: 960px;
       margin: 40px auto;
-      padding: 0 24px 40px 24px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      animation: fadeIn 1s ease-in;
+      padding: 0 20px 40px 20px;
     }
-    h1, h2 {
+    section {
+      margin-bottom: 80px;
+      padding: 40px 24px;
+      background-color: #E6FFFA;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      animation: fadeInUp 1s ease;
+    }
+    section#age80 {
+      background-color: #EBF8FF;
+    }
+    h1 {
+      font-size: 2.5rem;
       margin-top: 0;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #2C7A7B;
+      margin-bottom: 16px;
     }
     p {
       font-size: 16px;
-      color: #333;
+      color: #4A5568;
       margin-bottom: 20px;
     }
     .chart-container {
-      margin: 40px 0;
+      margin-top: 30px;
     }
     iframe {
-      border-radius: 8px;
-      overflow: hidden;
-      transition: transform 0.3s ease;
       width: 100%;
       height: 600px;
       border: none;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
     }
     iframe:hover {
       transform: scale(1.02);
@@ -56,13 +93,17 @@
       font-size: 14px;
       color: #999;
       border-top: 1px solid #ddd;
+      margin-top: 40px;
     }
-    footer:hover {
-      color: #666;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -72,9 +113,14 @@
     <h1>臺中市65-100歲人口統計圖表</h1>
   </header>
 
+  <nav>
+    <a href="#age65">65-79歲分析</a>
+    <a href="#age80">80-100歲分析</a>
+  </nav>
+
   <main>
     <!-- 65-79歲區段 -->
-    <section>
+    <section id="age65">
       <h2>65-79歲人口統計分析</h2>
       <p>
         本圖表展示臺中市65至79歲人口分布情形，總人口數達<strong>386,052人</strong>。<br><br>
@@ -87,14 +133,14 @@
 
         整體而言，65-79歲人口主要分布在市區地帶，這對於中老年族群的生活設施與醫療資源布局有重要參考價值。
       </p>
-    </section>
 
-    <section class="chart-container">
-      <iframe src="https://plotdb.io/v/chart/37295" allowfullscreen="true"></iframe>
+      <div class="chart-container">
+        <iframe src="https://plotdb.io/v/chart/37295" allowfullscreen="true"></iframe>
+      </div>
     </section>
 
     <!-- 80-100歲區段 -->
-    <section>
+    <section id="age80">
       <h2>80-100歲人口統計分析</h2>
       <p>
         本圖表展示的是<strong>臺中市80至100歲人口</strong>的分布情形，總人口數為<strong>88,196人</strong>。<br><br>
@@ -108,10 +154,10 @@
 
         這些資訊有助於理解超高齡人口的空間分布，作為未來長照資源與醫療設施設計的重要依據。
       </p>
-    </section>
 
-    <section class="chart-container">
-      <iframe src="https://plotdb.io/v/chart/37292" allowfullscreen="true"></iframe>
+      <div class="chart-container">
+        <iframe src="https://plotdb.io/v/chart/37292" allowfullscreen="true"></iframe>
+      </div>
     </section>
   </main>
 
